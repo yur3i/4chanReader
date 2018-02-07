@@ -14,8 +14,10 @@ def getposts(board, thread):
     r = requests.get("http://boards.4chan.org/"+board+"/thread/"+thread)
     site = r.text
     soup = bsoup(site, "html5lib")
-    op = soup.find_all("blockquote", {"class": "postMessage"})
-    print(op)
+    textposts = soup.find_all("blockquote", {"class": "postMessage"})
+    for posts in textposts:
+        
+    print(textposts)
 #if no arguments were passed, display the help message
 if len(sys.argv) == 1:
     print(helpmsg)

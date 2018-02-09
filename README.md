@@ -1,3 +1,3 @@
 # My 4chan reader
 
-This is a command line tool for pulling threads from 4chan and displaying them in a human readable format. So far only text posts work so long as they don't quote anyone else but that will soon change.
+This is my reader for the image board 4chan. Can currently pull all the text responses from a thread and a random image.

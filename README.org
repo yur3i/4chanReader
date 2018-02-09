@@ -1,8 +1,9 @@
 * 4chanreader
 a reader for the imageboard 4chan.
 ** Tasks
-TODO Add bulk image downloads
-TODO sort out spacing in text download mode
+Add bulk image downloads
+
+sort out spacing in text download mode
 ** Usage
 #+BEGIN_SRC
 reader.py -t g 51971506

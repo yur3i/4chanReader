@@ -1,13 +1,13 @@
 * 4chanreader
 a reader for the imageboard 4chan.
 ** Tasks
-*** TODO Add bulk image downloads
-*** TODO sort out spacing in text download mode
+TODO Add bulk image downloads
+TODO sort out spacing in text download mode
 ** Usage
 #+BEGIN_SRC
 reader.py -t g 51971506
 // will pull the text posts from thread number 51971506 on /g/
 
 reader.py -ri g 51971506
-//will pull a random image from thread number 51971506 on /g/
+// will pull a random image from thread number 51971506 on /g/
 #+END_SRC

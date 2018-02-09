@@ -6,9 +6,9 @@ helpmsg = "Welcome to yur3i\'s 4chan reader!\n\nUSAGE: -t/i <board> <thread>\n-t
 
 if len(sys.argv) == 1:
     print(helpmsg)
+    quit()
 if sys.argv[1] in ["-h"]:
     print(helpmsg)
-    quit()
 if sys.argv[1] in ["-t"]:
     getThread(sys.argv[2], sys.argv[3])
 if sys.argv[1] in ["-i"]:

@@ -28,8 +28,12 @@ def getRandomImage(board, threadno):
     r = requests.get("http://a.4cdn.org/"+board+"/thread/"+threadno+".json")
     threadjson = r.json()
     threadreplies = threadjson["posts"][0]["replies"]
-    print(threadreplies)
-    i = randint(0, threadreplies)
-
-
-        
+    filename = " "
+    while 1:
+        i = randint(0, threadreplies)
+        if "filename" in threadjson["posts"][i]:
+            break
+    filename = str((threadjson["posts"][i]["filename"]))
+    fileext  = str((threadjson["posts"][i]["ext"]))
+    fileurl  = "http://i.4cdn.org/"+board+"/"+filename+fileext
+    return fileurl

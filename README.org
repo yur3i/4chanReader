@@ -11,4 +11,7 @@ reader.py -t g 51971506
 
 reader.py -ri g 51971506
 // will pull a random image from thread number 51971506 on /g/
+
+reader.py -i g 51971506
+// will pull all images from thread number 51971506 on /g/
 #+END_SRC

@@ -1,6 +1,9 @@
 * 4chanreader
 a reader for the imageboard 4chan.
 
+** Requirements
+1. [[http://docs.python-requests.org/en/master/][Python Requests]]
+2. [[https://packages.debian.org/sid/w3m-img][w3m-img]]
 ** Usage
 #+BEGIN_SRC
 reader.py -t g 51971506

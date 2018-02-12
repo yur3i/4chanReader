@@ -2,7 +2,7 @@ import re
 import requests
 from random import randint
 import html
-from os import system as bash
+import urllib.request
 
 def cleanhtml(content):
     cleanr = re.compile('<.*?>')
@@ -48,6 +48,12 @@ def getRandomImage(board, threadno):
     filename = str((threadjson["posts"][i]["tim"]))
     fileext  = str((threadjson["posts"][i]["ext"]))
     fileurl  = "http://i.4cdn.org/"+board+"/"+filename+fileext
-    bash("wget "+fileurl)
-
+    urllib.request.urlretrieve(fileurl, "/tmp/img"+fileext)
+    return fileext
+#gets a random image from a random thread on a random board
+def completelyRandom(board):
+    r = requests.get("https://a.4cdn.org/"+board+"/catalog.json")
+    threadjson = r.json()
+    print(threadjson["posts"])
+    
 

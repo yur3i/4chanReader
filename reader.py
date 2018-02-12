@@ -14,5 +14,7 @@ if sys.argv[1] in ["-t"]:
 if sys.argv[1] in ["-i"]:
     getImages(sys.argv[2], sys.argv[3])
 if sys.argv[1] in ["-ri"]:
-    getRandomImage(sys.argv[2], sys.argv[3])
-    
+    fileext = getRandomImage(sys.argv[2], sys.argv[3])
+    bash("./imgrender.sh /tmp/img"+fileext)
+if sys.argv[1] in ["-r"]:
+    completelyRandom(sys.argv[2])

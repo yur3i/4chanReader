@@ -34,7 +34,9 @@ def getImages(board, threadno):
                     
     for image in filestoget:
         url = "http://i.4cdn.org/"+board+"/"+image
-        bash("wget "+url)
+        urllib.request.urlretrieve(url, image)
+        print("retrieving www.i.4cdn.org/"+board+"/"+image)
+
 #gets a random image from a thread
 def getRandomImage(board, threadno):
     r = requests.get("http://a.4cdn.org/"+board+"/thread/"+threadno+".json")
